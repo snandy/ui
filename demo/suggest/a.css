@@ -64,3 +64,16 @@ input {
   color: #bb0000;
 }
 /*base end*/
+
+
+/*suggest*/
+.ac_results {background:#fff;border:1px solid #7f9db9;position:absolute;zoom:1;z-index: 11;display: none;*width:330px;}
+.ac_results ul{margin:0;padding:0;list-style:none;}
+.ac_results li a{white-space: nowrap;text-decoration:none;display:block;color:#05a;padding:1px 3px;}
+.ac_results li{border:1px solid #fff; line-height:20px;font-size:12px}
+.ac_over,.ac_results li a:hover {background:#80c3ff;color:#ffffff}
+.ac_results li a span{float:right;padding-left: 10px;}
+.ac_result_tip{border-bottom:1px dashed #666;padding:3px;font-size:12px}
+.ac_results .red{padding-left: 5px;color: #c00}
+.ac_result_null{background-color:#bb0000;color:#ffffff;overflow:hidden;}
+/*base end*/
