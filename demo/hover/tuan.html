@@ -1,0 +1,559 @@
+    <!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+	<title>【京品惠】京东团购、限时抢购</title>
+	<link rel="shortcut icon" href="http://www.360buy.com/favicon.ico" />
+    <link rel="stylesheet" href="http://snandy.github.io/ui/css/base.css"/> 
+    <link rel="stylesheet" type="text/css" href="http://misc.360buyimg.com/tuangou/2013/skin/jph.css?v=20140327" media="all" />
+	<link rel="stylesheet" type="text/css" href="i/index.css?v=20140327" media="all" />
+    <script type="text/javascript">
+        window.pageConfig = {
+            compatible:true,
+            navId:"home"
+        };
+    </script>
+    <script src="http://snandy.github.io/ui/js/jquery-1.6.4.js"></script>
+    <script src="http://snandy.github.io/ui/js/baseUI.js"></script>       
+</head>
+<body class="root61">
+    <div class="layer">
+	  	<a title="关闭" href="javascript://;" class="shut">关闭按钮</a>
+	  	<h2>您的城市：</h2>
+	  	<div class="city" id="city8Div"></div>
+  		<p>没找到您的城市，选择”<a href="/citychange.action?city=quanguo">全国</a>“一样精彩~</p>
+	</div>
+<div id="shortcut-2013">
+	<div class="w">
+		<ul class="fl lh">
+			<li class="fore1 ld"><b></b><a href="javascript:addToFavorite()" rel="nofollow">收藏京东</a></li>
+		</ul>
+		<ul class="fr lh" data-ui="u-hover|li">
+			<li class="fore1" id="loginbar">您好！欢迎来到京东！<a href="javascript:login()">[登录]</a>&nbsp;<a href="javascript:regist()">[免费注册]</a></li>
+			<li class="fore2 ld">
+				<s></s>
+				<a href="http://jd2008.jd.com/JdHome/OrderList.aspx" rel="nofollow">我的订单</a>
+			</li>
+            <li class="fore2-1 ld" id="jd-vip">
+                <s></s>
+                <a target="_blank" rel="nofollow" href="http://vip.jd.com">会员俱乐部</a>
+            </li>
+            <li class="fore3 ld menu" id="app-jd">
+                <s></s><i></i><span class="outline"></span><span class="blank"></span>
+                <a href="http://app.jd.com/" target="_blank">手机京东</a><b></b>
+                <div class="dd lh"><div class="qr-info"></div><div class="qr-item qr-jd-app"><div class="qr-img"><img width="76" height="76" src="http://img11.360buyimg.com/da/jfs/t274/64/776867158/30074/3341c9cd/54237c80Nbc2c77a4.jpg" alt="手机京东" class="err-product" trigger-lazy-img="done" data-img="1" id="app-qrcode-img"></div><div class="qr-ext"><strong>京东客户端</strong><a class="btn-app-apple" target="_blank" href="http://itunes.apple.com/cn/app/id414245413" clstag="homepage|keycount|home2013|01d01"></a><a class="btn-app-android" target="_blank" href="http://3.cn/zKIUkC" clstag="homepage|keycount|home2013|01d02"></a></div></div><div class="qr-item qr-jd-jr"><div class="qr-img"><img width="76" height="76" src="http://img13.360buyimg.com/da/g13/M00/09/1A/rBEhUlNfWZwIAAAAAAEASBZlCNAAAMoggAwdV8AAQBg657.png" alt="网银钱包客户端" class="err-product" trigger-lazy-img="done" data-img="1" id="app-qrcode-img"></div><div class="qr-ext"><strong>网银钱包客户端</strong><a class="btn-app-apple" target="_blank" href="https://itunes.apple.com/cn/app/wang-yin-qian-bao/id832444218?mt=8" clstag="homepage|keycount|home2013|01d03"></a><a class="btn-app-android" target="_blank" href="http://m.wangyin.com/basic/download/android/jddt-wangyin.apk " clstag="homepage|keycount|home2013|01d04"></a></div></div></div>
+            </li>
+			<li class="fore4 ld menu" id="biz-service">
+				<s></s>
+				<span class="outline"></span>
+				<span class="blank"></span>
+				客户服务
+				<b></b>
+				<div class="dd">
+					<div><a href="http://help.jd.com/index.html" target="_blank">帮助中心</a></div>
+					<div><a href="http://myjd.jd.com/repair/orderlist.action" target="_blank" rel="nofollow">售后服务</a></div>
+					<div><a href="http://chat.jd.com/jdchat/custom.action" target="_blank" rel="nofollow">在线客服</a></div>
+					<div><a href="http://myjd.jd.com/opinion/list.action" target="_blank" rel="nofollow">投诉中心</a></div>
+					<div><a href="http://www.jd.com/contact/service.html" target="_blank">客服邮箱</a></div>
+				</div>
+			</li>
+			<li class="fore5 ld menu" id="site-nav">
+				<s></s>
+				<span class="outline"></span>
+				<span class="blank"></span>
+				网站导航
+				<b></b>
+				<div class="dd lh">
+					<dl class="item fore1">
+						<dt>特色栏目</dt>
+						<dd>
+							<div><a target="_blank" href="http://mobile.jd.com/index.do">京东通信</a></div>
+                            <div><a href="http://jdstar.jd.com/" target="_blank">校园之星</a></div>
+                            <div><a target="_blank" href="http://shipingou.jd.com/">视频购物</a></div>
+							<div><a target="_blank" href="http://club.jd.com/">京东社区</a></div>
+                            <div><a target="_blank" href="http://read.jd.com/">在线读书</a></div>
+							<div><a target="_blank" href="http://diy.jd.com/">装机大师</a></div>
+							<div><a target="_blank" href="http://market.jd.com/giftcard/">京东E卡</a></div>
+                            <div><a href="http://channel.jd.com/jiazhuang.html" target="_blank">家装城</a></div>
+                            <div><a href="http://dapeigou.jd.com/" target="_blank">搭配购</a></div>
+                            <div><a href="http://xihuan.jd.com/" target="_blank">我喜欢</a></div>
+						</dd>
+					</dl>
+					<dl class="item fore2">
+						<dt>企业服务</dt>
+						<dd>
+							<div><a target="_blank" href="http://giftcard.jd.com/company/index">企业客户</a></div>
+							<div><a target="_blank" href="http://sale.jd.com/p10997.html">办公直通车</a></div>
+						</dd>
+					</dl>
+					<dl class="item fore3">
+						<dt>旗下网站</dt>
+						<dd>
+							<div><a target="_blank" href="http://en.jd.com/">English Site</a></div>
+						</dd>
+					</dl>
+				</div>
+			</li>
+		</ul>
+		<span class="clr"></span>
+	</div>
+</div><!--shortcut end-->	<div id="o-header-2013">
+	<div class="w" id="header-2013">
+		<div id="logo-tuan" class="ld">
+	        <a class="link1" href="http://www.jd.com/" hidefocus="true"></a>
+	        <a class="link2" href="http://tuan.jd.com/" hidefocus="true"></a>
+	     </div>
+	     <!--logo end-->
+	     	<div id="guides">
+				<div class="city">
+					<h2 id="showCity">北京</h2>
+				</div>
+				<a href="javascript:void(0)" title="切换城市">[更换]</a>
+			</div>
+		 		<div id="search-2013">
+			<div class="i-search ld">
+				<ul id="shelper" class="hide">
+				</ul>
+				<div class="form">
+	              <form id="searchform" method="get" action="http://s.tuan.jd.com/search.php">
+					 <input type="text" class="text" id="key-tuan" name="keyword" accesskey="s" maxlength="50" value="请输入商品名称、分类、商圈..." xtip="请输入商品名称、分类、商圈..." autocomplete="off" />
+					 <input type="submit" class="button" value="搜索" title="搜索" />
+	                 <input type="hidden" class="stext" name="city_id" value="25" id="changeCityId" />
+	              </form>
+				</div>
+			</div>
+			<div id="hotwords" clstag="homepage|keycount|home2013|03b"><strong>热门搜索：</strong>
+<a clstag="tuan|keycount|firstpage|search" href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4361&bid=0&unit=84380&advid=128706&guv=&url=http://tuan.jd.com/team-11613752.html" target="_blank" title="俏江南" style="">俏江南</a>
+<a clstag="tuan|keycount|firstpage|search" href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4361&bid=0&unit=85248&advid=130351&guv=&url=http://tuan.jd.com/team-12311831.html" target="_blank" title="豆捞坊" style="">豆捞坊</a>
+<a clstag="tuan|keycount|firstpage|search" href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4361&bid=0&unit=84763&advid=129445&guv=&url=http://tuan.jd.com/team-12311997.html" target="_blank" title="大鸭梨" style="">大鸭梨</a>
+<a clstag="tuan|keycount|firstpage|search" href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4361&bid=0&unit=84500&advid=128931&guv=&url=http://tuan.jd.com/team-11806400.html" target="_blank" title="同一首歌" style="">同一首歌</a></div>
+		</div>
+		<!--search end-->
+		<div class="regist-wrap">
+			   <div id="mytuan">
+    			<a onclick="return X.team.buy_check_login('/myjph/orderList.html');" href="/myjph/orderList.html">我的京品惠</a>
+      		</div>
+		</div>
+	</div>
+	<!--header end-->
+	<div class="w">
+		<div id="nav-2013">
+			<ul id="navitems-2013">
+				<li class="fore1" id="nav-home"><a href="/beijing-index.html" title="首页">首页</a></li>
+				<li class="fore2" id="nav-entity"><a href="/channel/entity-beijing-0-0-0-1-0-0-0-0-1.html" title="商品惠">商品惠</a></li>
+				<li class="fore3" id="nav-life"><a href="/channel/virtual-beijing-0-0-0-0-0-0-1-0-1.html" title="生活惠">生活惠</a><b></b></li>
+				<li class="fore4" id="nav-brand"><a href="/channel/pinpaihui-beijing.html" title="品牌惠">品牌惠</a></li>
+                <li class="fore5" id="nav-jiazhuanghui"><a href="/channel/jiazhuanghui-beijing-0-1.html" title="家装惠">家装惠</a></li>
+                <li class="fore6" id="nav-shehuahui"><a href="/channel/shehuahui-beijing-0-1.html" title="奢华惠">奢华惠</a></li>
+				<li class="fore7" id="nav-tomorrow"><a href="/channel/mingrihui-beijing.html" title="明日惠">明日惠</a></li>
+            </ul>
+		</div>
+	</div>
+</div>
+<!-- header end -->
+<script type="text/javascript">
+(function(){if(pageConfig.navId){var object=document.getElementById("nav-"+pageConfig.navId);if(object)object.className+=" curr";}})();
+</script>
+<script type="text/javascript">
+(function(){var a=document.getElementById("nav-2013");if(!a){return};var b=document.createElement("div");b.className="w";b.style.position="relative";b.style.paddingLeft="0";b.style.width=pageConfig.wideVersion&&pageConfig.compatible
+?"1210px":"990px";b.innerHTML=a.innerHTML;a.parentNode.className="";a.style.paddingLeft="0";a.style.marginBottom="0";a.innerHTML="";a.appendChild(b)})();
+</script>
+	    <div class="banner-bg" id="minbanerbg" data-ui="u-focusPic|&|curr|true">
+	    <div class="opc-bg">
+		    <div class="opc-se"></div>
+	    	<img data-ui="focus-bg" src="http://img10.360buyimg.com/da/jfs/t322/234/2109029328/22509/d7a8af94/5454334dNd43a05e2.jpg" class="opc-img hide">
+	    	<img data-ui="focus-bg" src="http://img13.360buyimg.com/da/jfs/t364/252/739014287/23727/14f036fe/542a47abN4641cef2.jpg" class="opc-img hide">
+	    	<img data-ui="focus-bg" src="http://img13.360buyimg.com/da/jfs/t286/133/950171262/21762/5d43438b/542a47b8N492ada10.jpg" class="opc-img hide">
+	    	<img data-ui="focus-bg" src="http://img13.360buyimg.com/da/jfs/t391/241/714176907/20511/bd88c3bf/542a47c5Nbb729a6e.jpg" class="opc-img">
+	    </div>
+	    <div class="banner-wrap minbanner" id="slide">
+            <div class="sub1">
+                <ul class="slide-items" style="height:240px;">
+				  <li data-ui="focus-content">
+				    <div class="bannerli-img">
+				      <a href="" target="_blank"><img src="http://img10.360buyimg.com/da/jfs/t637/75/175429753/58499/e6e8f7b6/54543345N6dc08531.jpg" width="690" height="220"></a>
+				    </div>
+				  </li>
+				  <li class="hide" data-ui="focus-content">
+				    <div class="bannerli-img">
+				      <a href="" target="_blank"><img src="http://img11.360buyimg.com/da/jfs/t400/72/744205644/162172/ffe4b81b/542a47a6Ncf9d981a.jpg" width="690" height="220"></a>
+				    </div>
+				  </li>	  
+				  <li class="hide" data-ui="focus-content">
+				    <div class="bannerli-img">
+				      <a href="" target="_blank"><img src="http://img11.360buyimg.com/da/jfs/t331/150/958729872/170936/81959df9/542a47b4Nb55b78fd.jpg" width="690" height="220"></a>
+				    </div>
+				  </li>
+				  <li class="hide" data-ui="focus-content">
+				    <div class="bannerli-img">
+				      <a href="" target="_blank"><img src="http://img13.360buyimg.com/da/jfs/t307/163/946966333/215658/17866316/542a47c2Neb3289b3.jpg" width="690" height="220"></a>
+				    </div>
+				  </li>				  
+				</ul>
+				<div class="slide-controls">
+					<span class="curr" data-ui="focus-nav">1</span>
+					<span data-ui="focus-nav">2</span>
+					<span data-ui="focus-nav">3</span>
+					<span data-ui="focus-nav">4</span>
+				</div>
+            </div>
+            <div class="w topscroll sub2" >
+        	    <div class="ba-scrollwrap" data-ui="u-slide|3|true">
+                    <div class="bascroll">
+	        	        <a data-ui="btn-prev" href="javascript:;" class="left ctrl"><b></b></a>
+	        		    <a data-ui="btn-next" href="javascript:;" class="right ctrl"><b></b></a>
+	        		    <div class="bascroll-list">
+	        		        <ul class="listul" data-ui="slide-wrap">
+	        				    <li class="fore1" data-ui="slide-item">
+  <a href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4506&bid=0&unit=86891&advid=133631&guv=&url=http://tuan.jd.com/team-11613752.html" target="_blank"><img src="http://img13.360buyimg.com/da/jfs/t157/58/1290069292/7798/37cb9d8f/53a919ceN5d6d8b3e.jpg" alt="" width="190" height="60"/></a>
+</li>
+<li class="fore2" data-ui="slide-item">
+  <a href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4506&bid=0&unit=86892&advid=133632&guv=&url=http://tuan.jd.com/team-11698907.html" target="_blank"><img src="http://img11.360buyimg.com/da/g14/M07/10/13/rBEhVlMBr0cIAAAAAAAhBd5oWMEAAIvNgGhQ6wAACEd575.jpg" alt="" width="190" height="60"/></a>
+</li>
+<li class="fore3" data-ui="slide-item">
+  <a href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4506&bid=0&unit=86893&advid=133633&guv=&url=http://tuan.jd.com/team-12432795.html" target="_blank"><img src="http://img11.360buyimg.com/da/jfs/t187/92/2373107865/6784/7bf60ddf/53cc9eafN1b319155.jpg" alt="" width="190" height="60"/></a>
+</li>
+<li class="fore4" data-ui="slide-item">
+  <a href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4506&bid=0&unit=86917&advid=133659&guv=&url=http://tuan.jd.com/team-12311997.html" target="_blank"><img src="http://img14.360buyimg.com/da/jfs/t208/112/1236040455/7176/7ba8aab7/53a919e8N5c6a2051.jpg" alt="re" width="190" height="60"/></a>
+</li>
+<li class="fore5" data-ui="slide-item">
+  <a href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4506&bid=0&unit=86918&advid=133660&guv=&url=http://tuan.jd.com/team-11786291.html" target="_blank"><img src="http://img10.360buyimg.com/da/jfs/t172/344/817758040/6930/f52f03a0/539a4b09N07e632cb.jpg" alt="" width="190" height="60"/></a>
+</li>
+<li class="fore6" data-ui="slide-item">
+  <a href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4506&bid=0&unit=87051&advid=134018&guv=&url=http://tuan.jd.com/team-12311831.html" target="_blank"><img src="http://img10.360buyimg.com/da/jfs/t175/71/1292453421/9515/fdd110c5/53a91a00Ne1bab457.jpg" alt="" width="190" height="60"/></a>
+</li>
+	        			    </ul>
+	        		    </div>
+        		    </div>
+        	    </div>
+            </div>
+        </div>
+
+        <div class="w">
+			<div class="menu-bg rootmenu" data-ui="u-suction|dog-menu">
+				<div class="dog-bg"></div>
+				<div class="nav-menu w clearfix" >
+			        					<div class="clearfix nav-menulist">
+						<h2><a href="/channel/entity-beijing-0-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank">商品惠</a></h2>
+						<ul class="clearfix">
+							<li data-cate="nvzhuangpeishi"><a href="/channel/entity-beijing-5446-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank" title="女装配饰" data-cate="nvzhuangpeishi"><i></i>女装配饰</a></li>
+							<li data-cate="nanzhuangpeishi"><a href="/channel/entity-beijing-5445-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank" title="男装配饰" data-cate="nanzhuangpeishi"><i></i>男装配饰</a></li>
+							<li data-cate="jiajujiafang"><a href="/channel/entity-beijing-90-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank" title="家居家装" data-cate="jiajujiafang"><i></i>家居家装</a></li>
+							<li data-cate="shenghuojiadian"><a href="/channel/entity-beijing-3874-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank" title="生活家电" data-cate="shenghuojiadian"><i></i>生活家电</a></li>
+							<li data-cate="gehuhuazhuang"><a href="/channel/entity-beijing-91-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank" title="个护化妆" data-cate="gehuhuazhuang"><i></i>个护化妆</a></li>
+							<li data-cate="yudonghuwai"><a href="/channel/entity-beijing-101-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank" title="运动户外" data-cate="yudonghuwai"><i></i>运动户外</a></li>
+							<li data-cate="muyingwanju"><a href="/channel/entity-beijing-3875-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank" title="母婴玩具" data-cate="muyingwanju"><i></i>母婴玩具</a></li>
+							<li data-cate="lipinxiangbao"><a href="/channel/entity-beijing-3817-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank" title="箱包礼品" data-cate="lipinxiangbao"><i></i>箱包礼品</a></li>
+							<li data-cate="shipinbaojian"><a href="/channel/entity-beijing-102-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank" title="食品保健" data-cate="shipinbaojian"><i></i>食品保健</a></li>
+							<li data-cate="guoshushengxian"><a href="/channel/entity-beijing-3905-0-0-1-0-0-0-0-1.html?jdr=home-3" target="_blank" title="果蔬生鲜" data-cate="guoshushengxian"><i></i>果蔬生鲜</a></li>
+						</ul>
+					</div>
+			        <div class="clearfix nav-menulist">
+				        	<h2 class="posr"><a href="/channel/virtual-beijing-0-0-0-0-0-0-1-0-1.html?jdr=home-3" target="_blank">生活惠</a><b></b></h2>
+						    <ul class="clearfix category-2014" data-ui="u-hover|li">
+						    		<li class="item fore1">
+                                        <span class="item-catwrap">
+										    <h3 class="item-tit">
+										        <div class="catelist">
+											        <a title="" target="_blank" data-cate="canyinmeishi"  href="/channel/virtual-beijing-87-0-0-0-0-0-1-0-1.html?jdr=home-3"><i></i>餐饮美食</a>
+											    </div>
+										        											    <div class="catelist">
+											        <a title="" target="_blank" data-cate="sheyingxiezhen"  href="/channel/virtual-beijing-204-0-0-0-0-0-1-0-1.html?jdr=home-3"><i></i>摄影写真</a>
+										        </div>
+											    										    </h3>
+										    <s></s>
+									    </span>
+									    									    <div class="i-mc">
+									        <div class="close">×</div>
+										    <div class="subitem">
+										        											    <dl class="fore1">
+												    <dt>
+												        <a  href="/channel/virtual-beijing-87-0-0-0-0-0-1-0-1.html?jdr=home-3" target="_blank">餐饮美食</a>
+												    </dt>
+											        <dd>
+												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-0-0-0-0-0-1-1-1.html?jdr=home-3">今日新品</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1198-0-0-0-0-1-0-1.html?jdr=home-3">自助餐</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1197-0-0-0-0-1-0-1.html?jdr=home-3">火锅</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1208-0-0-0-0-1-0-1.html?jdr=home-3">烧烤烤肉</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1203-0-0-0-0-1-0-1.html?jdr=home-3">川湘菜</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1204-0-0-0-0-1-0-1.html?jdr=home-3">北京菜</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1206-0-0-0-0-1-0-1.html?jdr=home-3">粤港菜</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1205-0-0-0-0-1-0-1.html?jdr=home-3">江浙菜</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1210-0-0-0-0-1-0-1.html?jdr=home-3">清真菜</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1207-0-0-0-0-1-0-1.html?jdr=home-3">海鲜</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1212-0-0-0-0-1-0-1.html?jdr=home-3">快餐小吃</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1200-0-0-0-0-1-0-1.html?jdr=home-3">日韩料理</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1201-0-0-0-0-1-0-1.html?jdr=home-3">西餐</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1202-0-0-0-0-1-0-1.html?jdr=home-3">地方菜</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1209-0-0-0-0-1-0-1.html?jdr=home-3">东南亚菜</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1211-0-0-0-0-1-0-1.html?jdr=home-3">咖啡茶馆</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1199-0-0-0-0-1-0-1.html?jdr=home-3">蛋糕甜点</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-3841-0-0-0-0-1-0-1.html?jdr=home-3">卡券</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-1213-0-0-0-0-1-0-1.html?jdr=home-3">其他美食</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-87-3906-0-0-0-0-1-0-1.html?jdr=home-3">京东自营</a>
+												        </em>
+												    											        </dd>
+											    </dl>										        									            										        <dl class="fore2">
+												    <dt>
+												        <a  href="/channel/virtual-beijing-204-0-0-0-0-0-1-0-1.html?jdr=home-3" target="_blank">摄影写真</a>
+												    </dt>
+											  	    <dd>
+											            <em>
+													        <a target="_blank" href="/channel/virtual-beijing-204-0-0-0-0-0-1-1-1.html?jdr=home-3">今日新品</a>
+													    </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-204-1228-0-0-0-0-1-0-1.html?jdr=home-3">婚纱摄影</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-204-1231-0-0-0-0-1-0-1.html?jdr=home-3">儿童摄影</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-204-1229-0-0-0-0-1-0-1.html?jdr=home-3">个人写真</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-204-1230-0-0-0-0-1-0-1.html?jdr=home-3">孕妇亲子</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-204-3886-0-0-0-0-1-0-1.html?jdr=home-3">全家福</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-204-1232-0-0-0-0-1-0-1.html?jdr=home-3">证件照</a>
+												        </em>
+												        											        </dd>
+											    </dl>
+									            										    </div>
+									    </div>
+								    </li>							     							        							 
+								    <li class="item fore2">
+                                        <span class="item-catwrap">
+										    <h3 class="item-tit">
+										        <div class="catelist">
+											        <a title="" target="_blank" data-cate="xiuxianyule"  href="/channel/virtual-beijing-88-0-0-0-0-0-1-0-1.html?jdr=home-3"><i></i>休闲娱乐</a>
+											    </div>
+										        											    <div class="catelist">
+											        <a title="" target="_blank" data-cate="dianyingyanchu"  href="/channel/virtual-beijing-206-0-0-0-0-0-1-0-1.html?jdr=home-3"><i></i>电影演出</a>
+										        </div>
+											    										    </h3>
+										    <s></s>
+									    </span>
+									    									    <div class="i-mc">
+									        <div class="close">×</div>
+										    <div class="subitem">
+										        											    <dl class="fore1">
+												    <dt>
+												        <a  href="/channel/virtual-beijing-88-0-0-0-0-0-1-0-1.html?jdr=home-3" target="_blank">休闲娱乐</a>
+												    </dt>
+											        <dd>
+												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-88-0-0-0-0-0-1-1-1.html?jdr=home-3">今日新品</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-88-1215-0-0-0-0-1-0-1.html?jdr=home-3">KTV</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-88-1222-0-0-0-0-1-0-1.html?jdr=home-3">足疗保健</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-88-3826-0-0-0-0-1-0-1.html?jdr=home-3">温泉/洗浴</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-88-3785-0-0-0-0-1-0-1.html?jdr=home-3">滑雪</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-88-1216-0-0-0-0-1-0-1.html?jdr=home-3">戏水</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-88-1214-0-0-0-0-1-0-1.html?jdr=home-3">游乐游艺</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-88-1217-0-0-0-0-1-0-1.html?jdr=home-3">桌游电玩</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-88-1218-0-0-0-0-1-0-1.html?jdr=home-3">DIY手工</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-88-3575-0-0-0-0-1-0-1.html?jdr=home-3">其他</a>
+												        </em>
+												    											        </dd>
+											    </dl>										        									            										        <dl class="fore2">
+												    <dt>
+												        <a  href="/channel/virtual-beijing-206-0-0-0-0-0-1-0-1.html?jdr=home-3" target="_blank">电影演出</a>
+												    </dt>
+											  	    <dd>
+											            <em>
+													        <a target="_blank" href="/channel/virtual-beijing-206-0-0-0-0-0-1-1-1.html?jdr=home-3">今日新品</a>
+													    </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-206-1219-0-0-0-0-1-0-1.html?jdr=home-3">电影票</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-206-1220-0-0-0-0-1-0-1.html?jdr=home-3">票务演出</a>
+												        </em>
+												        											        </dd>
+											    </dl>
+									            										    </div>
+									    </div>
+								    </li>				
+								    <li class="item fore3">
+                                        <span class="item-catwrap">
+										    <h3 class="item-tit">
+										        <div class="catelist">
+											        <a title="" target="_blank" data-cate="bendishenghuo"  href="/channel/virtual-beijing-208-0-0-0-0-0-1-0-1.html?jdr=home-3"><i></i>本地生活</a>
+											    </div>
+										        											    <div class="catelist">
+											        <a title="" target="_blank" data-cate="lvyoudujia"  href="/channel/virtual-beijing-2315-0-0-0-0-0-1-0-1.html?jdr=home-3"><i></i>旅游度假</a>
+										        </div>
+											    										    </h3>
+										    <s></s>
+									    </span>
+									    									    <div class="i-mc">
+									        <div class="close">×</div>
+										    <div class="subitem">
+										        											    <dl class="fore1">
+												    <dt>
+												        <a  href="/channel/virtual-beijing-208-0-0-0-0-0-1-0-1.html?jdr=home-3" target="_blank">本地生活</a>
+												    </dt>
+											        <dd>
+												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-0-0-0-0-0-1-1-1.html?jdr=home-3">今日新品</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-1221-0-0-0-0-1-0-1.html?jdr=home-3">体检保健</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-3815-0-0-0-0-1-0-1.html?jdr=home-3">口腔护理</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-1224-0-0-0-0-1-0-1.html?jdr=home-3">配镜</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-1223-0-0-0-0-1-0-1.html?jdr=home-3">运动健身</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-3828-0-0-0-0-1-0-1.html?jdr=home-3">通信充值</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-3825-0-0-0-0-1-0-1.html?jdr=home-3">定制服务</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-3824-0-0-0-0-1-0-1.html?jdr=home-3">汽车服务</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-1237-0-0-0-0-1-0-1.html?jdr=home-3">教育培训</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-3835-0-0-0-0-1-0-1.html?jdr=home-3">房产服务</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-3887-0-0-0-0-1-0-1.html?jdr=home-3">超市卡</a>
+												        </em>
+												    												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-208-3829-0-0-0-0-1-0-1.html?jdr=home-3">其他服务</a>
+												        </em>
+												    											        </dd>
+											    </dl>     									            										        <dl class="fore2">
+												    <dt>
+												        <a  href="/channel/virtual-beijing-2315-0-0-0-0-0-1-0-1.html?jdr=home-3" target="_blank">旅游度假</a>
+												    </dt>
+											  	    <dd>
+											            <em>
+													        <a target="_blank" href="/channel/virtual-beijing-2315-0-0-0-0-0-1-1-1.html?jdr=home-3">今日新品</a>
+													    </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-2315-3827-0-0-0-0-1-0-1.html?jdr=home-3">景点门票</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-2315-2316-0-0-0-0-1-0-1.html?jdr=home-3">周边游</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-2315-1236-0-0-0-0-1-0-1.html?jdr=home-3">国内自由行</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-2315-2317-0-0-0-0-1-0-1.html?jdr=home-3">国内跟团游</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-2315-3889-0-0-0-0-1-0-1.html?jdr=home-3">国外自由行</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-2315-3890-0-0-0-0-1-0-1.html?jdr=home-3">国外跟团游</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-2315-3891-0-0-0-0-1-0-1.html?jdr=home-3">机票团购</a>
+												        </em>
+												        												        <em>
+														    <a target="_blank" href="/channel/virtual-beijing-2315-3892-0-0-0-0-1-0-1.html?jdr=home-3">酒店住宿</a>
+												        </em>
+												        											        </dd>
+											    </dl>
+									            										    </div>
+									    </div>
+								    </li>
+							     	<li class="item fore4">
+                                        <span class="item-catwrap">
+										    <h3 class="item-tit">
+										        <div class="catelist">
+											        <a title="" target="_blank" data-cate="jiudiantuangou"  href="/channel/hotel-0-0-0-0-1-0-0-0-0-1.html?jdr=home-3" ><i></i>酒店团购</a>
+											    </div>
+										        										    </h3>
+										    <s></s>
+									    </span>
+									</li>
+							    </ul>
+				        					</div>
+					<div class="clearfix nav-menulist menu-add">
+						<ul class="clearfix ">
+							<li><a href="/channel/pinpaihui-beijing.html?jdr=home-3" target="_blank">品牌惠</a></li>
+							<li><a href="/channel/jiazhuanghui-beijing-0-1.html?jdr=home-3"  target="_blank">家装惠</a></li>
+							<li><a href="/channel/shehuahui-beijing-0-1.html?jdr=home-3" target="_blank">奢华惠</a></li>
+							<li><a href="/channel/mingrihui-beijing.html?jdr=home-3" target="_blank">明日惠</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="zero-wrap">
+	            <div class="zero"><!--<span class="pi pix">0元抽奖</span>--><div class="p-img" clstag="tuan|keycount|firstpage|choujiang"><a target="_blank" href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4296&bid=0&unit=82690&advid=125544&guv=&url=http://sale.jd.com/act/8ZpJgQDbcWFP4.html"><img width="290" height="250" src="http://img11.360buyimg.com/da/jfs/t538/124/164551167/23546/9f2a6081/545433e6N455a0bff.jpg"></a></div><div class="p-name"><a title="京东团购11.11吃喝玩乐1元就购了!" target="_blank" href="http://c.nfa.jd.com/adclick?sid=7&cid=336&aid=4296&bid=0&unit=82690&advid=125544&guv=&url=http://sale.jd.com/act/8ZpJgQDbcWFP4.html">京东团购11.11吃喝玩乐1元就购了!</a></div></div>
+			</div>
+		</div>
+	</div>
+	<div style="height:500px;"></div>
+<script src="hover.js"></script>
+	</body>
+</html>
