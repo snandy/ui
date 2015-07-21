@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>采用zIndex布局的焦点图</title>
+    <link rel="stylesheet" href="http://snandy.github.io/ui/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="i/jdindex.css" media="all"/>
+    <script src="http://snandy.github.io/ui/js/jquery-1.6.4.js"></script>
+    <script src="http://snandy.github.io/ui/js/baseUI.js"></script>       
+</head>
+<body class="root61">
+<div id="focus">
+    <div class="slider">            
+        <ul class="slider-main" style="position: relative;">                    
+            <li style="position: absolute; z-index: 0; opacity: 0;" class="slider-panel">                       
+                <div class="inner">
+                    <a href="http://sale.jd.com/act/0WlsgZax1zF.html" target="_blank">                             
+                        <img width="730" height="454" src="http://img30.360buyimg.com/da/jfs/t1264/173/252861674/94534/c0e76651/550fdeacN29184fef.jpg" alt="" data-lazy-img="done">
+                    </a>                       
+                </div>                  
+            </li>                   
+            <li class="slider-panel">                       
+                <div class="inner">
+                <a clstag="h|keycount|2015|08a2" href="http://sale.jd.com/act/nUYoEIkzJG.html?cpdad=1DLSUE" target="_blank">
+                    <img width="730" height="454" src="http://img13.360buyimg.com/da/jfs/t880/353/228752789/108496/b99cdd93/550c0264N93a19285.jpg" alt="" data-lazy-img="done">                         
+                </a>                        
+                </div>                  
+            </li>                   
+            <li class="slider-panel">                      
+                <div class="inner">                         <a href="http://sale.jd.com/act/RKHZdmWn50oycF.html" target="_blank">                              <img width="730" height="454" src="http://img10.360buyimg.com/da/jfs/t1186/54/276441142/93373/f51812ad/55128b28N1eb644c0.jpg" alt="" data-lazy-img="done">                          </a>                        </div>                  
+            </li>
+            <li class="slider-panel">                       
+                <div class="inner">                         
+                <a href="http://sale.jd.com/act/DLQqS6txrGTkPeF.html?from=jdsj_04_101181" target="_blank">
+                    <img width="730" height="454" src="http://img11.360buyimg.com/da/jfs/t1192/310/289706604/97640/b80647d/55139c0aNfcf9a850.jpg" alt="" data-lazy-img="done">                          
+                </a>                        
+                </div>                  
+            </li>                   
+            <li class="slider-panel">                       
+                <div class="inner">                         
+                    <a href="http://sale.jd.com/act/a2QKkC54FXWt0HT.html?cpdad=1DLSUE" target="_blank">                                
+                        <img width="730" height="454" src="http://img20.360buyimg.com/da/jfs/t1177/349/289911596/98756/c0a1dc8e/55129a16Ne857206e.jpg" alt="" data-lazy-img="done">                         
+                    </a>                       
+                </div>                  
+            </li>                   
+            <li class="slider-panel">                       
+                <div class="inner">                         
+                    <a href="http://sale.jd.com/act/VUZazpTrLg0YKQw.html" target="_blank">                             
+                        <img width="730" height="454" src="http://img13.360buyimg.com/da/jfs/t1033/19/217529924/100946/f9747e79/550bd2d4N9be7b47f.jpg" alt="" data-lazy-img="done">                         
+                    </a>                        
+                </div>                  
+            </li>
+        </ul>          
+        <div class="slider-extra">              
+            <ul class="slider-nav">
+                <li class="slider-item">1</li>
+                <li class="slider-item">2</li>
+                <li class="slider-item slider-selected">3</li>
+                <li class="slider-item">4</li>
+                <li class="slider-item">5</li>
+                <li class="slider-item">6</li>
+            </ul>                    
+            <div class="slider-page">                        
+                <a class="slider-prev" href="javascript:void(0)">&lt;</a>                       
+                <a class="slider-next" href="javascript:void(0)">&gt;</a>               
+            </div>          
+        </div>      
+    </div>
+</div>
+<script src="tab.js"></script>
+<script src="focusPic.js"></script>
+<script type="text/javascript">
+    $('.slider').focusPic({
+        nav: 'li.slider-item',
+        content: 'li.slider-panel',
+        prevBtn: '.slider-prev',
+        nextBtn: '.slider-next',
+        currCls: 'slider-selected',
+        animate: 'zIndex'
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,3903 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>带左右箭头的焦点图</title>
+    <link rel="stylesheet" type="text/css" href="http://misc.360buyimg.com/lib/skin/2013/base.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="http://misc.360buyimg.com/virtuals/ui/css/ui.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="i/gj.css" media="all" />
+    <script src="http://snandy.github.io/ui/js/jquery-1.6.4.js"></script>
+    <script src="http://snandy.github.io/ui/js/baseUI.js"></script>   
+</head>
+<body class="root61">
+<div class="gjmb">
+    <div class="gjfpic" data-ui="u-focusPic|&|curr|true">
+        <div class="ctrls">
+            <a class="prev ctrl" data-ui="btn-prev"><b></b></a>
+            <a class="next ctrl" data-ui="btn-next"><b></b></a>
+        </div>
+        <div class="pics">
+            <a data-ui="focus-content" href="http://www.jd.com"><img width="1920" height="360" src="images/banner_img1_1920.jpg" alt=""/></a>
+            <a data-ui="focus-content" href="http://www.jd.com"><img width="1920" height="360" src="images/banner_img2_1920.jpg" alt=""/></a>
+            <a data-ui="focus-content" href="http://www.jd.com"><img width="1920" height="360" src="images/banner_img3_1920.jpg" alt=""/></a>
+            <a data-ui="focus-content" href="http://www.jd.com"><img width="1920" height="360" src="images/banner_img4_1920.jpg" alt=""/></a>
+        </div>
+        <div class="num-ctrl">
+            <ul>
+                <li data-ui="focus-nav"></li>
+                <li data-ui="focus-nav"></li>
+                <li data-ui="focus-nav"></li>
+                <li data-ui="focus-nav"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="gjfsb">
+        <div class="search-box" style="width: 358px;">
+            <div class="search-heading clearfix">
+                <h2>国际•港澳台机票查询</h2>
+                <a class="gnjp-link" href="#">国内机票&nbsp;</span><i></i></a>
+            </div>
+            <div class="search-content">
+                <!-- 搜索类型 -->
+                <ul class="search-form search_type">
+                    <li class="form-group">
+                        <label class="rds">航班类型</label>
+                        <label class="rds"><input type="radio" checked="checked" name="type" value="OW">单程</label>
+                        <label class="rds"><input type="radio" name="type" value="RT">往返</label>
+                        <label class="rds"><input type="radio" name="type" value="MP">多程&nbsp;&nbsp;<i class="ico-info"></i></label>
+                    </li>
+                </ul>
+
+                <!-- 单程和返程 -->
+                <ul class="search-form search_baseform" style="display: block;">
+                    <li class="clearfix">
+                        <label class="label">出发城市</label>
+                        <div class="label-ctrl">
+                            <input type="text" id="gjdepCity" class="inp-text" data-ui="u-placeholder|中文/拼音/英文" autocomplete="off" value="" style="color: rgb(51, 51, 51);">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <label class="label">到达城市</label>
+                        <div class="label-ctrl">
+                            <input type="text" id="gjarrCity" class="inp-text" data-ui="u-placeholder|中文/拼音/英文" autocomplete="off" value="" style="color: rgb(51, 51, 51);">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <label class="label">出发时间</label>
+                        <div class="label-ctrl">
+                            <input type="text" id="gjdepDate" readonly="readonly" class="inp-text" value="">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <label class="label">到达时间</label>
+                        <div class="label-ctrl">
+                            <input type="text" id="gjarrDate" readonly="readonly" class="inp-text" value="">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <label class="label">乘客人数</label>
+                        <div class="label-ctrl">
+                        <span class="label2">
+                            成人
+                        </span>
+                            <cite data-ui="u-select" class="form-cite form-cite2">
+                                <select name="">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                                <var><i></i><em data-ui="select-selected">1</em></var>
+                            </cite>
+                        <span class="label2 label-ml">
+                            儿童
+                        </span>
+                            <cite data-ui="u-select" class="form-cite form-cite2">
+                                <select name="">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <var><i></i><em data-ui="select-selected">0</em></var>
+                            </cite>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- 多程  -->
+                <ul class="search-form search-multiform" style="display: none;">
+                    <li class="clearfix">
+                        <em>1</em>
+                        <label class="label label-ml">出发城市</label>
+                        <div class="label-ctrl">
+                            <input type="text" id="gjMultiDepCity1" class="inp-text" data-ui="u-placeholder|中文/拼音/英文" autocomplete="off" value="" style="color: rgb(51, 51, 51);">
+                        </div>
+                        <label class="label label-ml2">到达城市</label>
+                        <div class="label-ctrl">
+                            <input type="text" id="gjMultiArrCity1" class="inp-text" data-ui="u-placeholder|中文/拼音/英文" autocomplete="off" value="" style="color: rgb(51, 51, 51);">
+                        </div>
+                        <label class="label label-ml2">出发时间</label>
+                        <div class="label-ctrl label-ctrl2">
+                            <input type="text" id="gjMultiDepDate1" readonly="readonly" class="inp-text" value="">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <em>2</em>
+                        <label class="label label-ml">出发城市</label>
+                        <div class="label-ctrl">
+                            <input type="text" id="gjMultiDepCity2" class="inp-text" data-ui="u-placeholder|中文/拼音/英文" autocomplete="off" value="" style="color: rgb(51, 51, 51);">
+                        </div>
+                        <label class="label label-ml2">到达城市</label>
+                        <div class="label-ctrl">
+                            <input type="text" id="gjMultiArrCity2" class="inp-text" data-ui="u-placeholder|中文/拼音/英文" autocomplete="off" value="" style="color: rgb(51, 51, 51);">
+                        </div>
+                        <label class="label label-ml2">出发时间</label>
+                        <div class="label-ctrl label-ctrl2">
+                            <input type="text" id="gjMultiDepDate2" readonly="readonly" class="inp-text" value="">
+                        </div>
+                        <a class="delete" href="javascript:;">×</a>
+                    </li>
+                    <li class="addbar">
+                        <a class="add" href="javascript:;"><b></b>添加行程</a>
+                    </li>
+                </ul>
+
+                <!-- 单程和返程 高级搜索 -->
+                <div class="search-advform" style="display: none;">
+                    <div class="line"></div>
+                    <ul class="search-form">
+                        <li class="clearfix">
+                            <label class="label">舱位等级</label>
+                            <div class="label-ctrl">
+                                <cite data-ui="u-select" class="form-cite">
+                                    <select name="">
+                                        <option value="ECONOMY">经济舱</option>
+                                        <option value="PREMIUM_ECONOMY">超级经济舱</option>
+                                        <option value="BUSINESS">公务舱</option>
+                                        <option value="FIRST">头等舱</option>
+                                    </select>
+                                    <var><i></i><em data-ui="select-selected">经济舱</em></var>
+                                </cite>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <label class="label">乘客类型</label>
+                            <div class="label-ctrl">
+                                <cite data-ui="u-select" class="form-cite">
+                                    <select name="" id="journeyType">
+                                        <option value="0">普通</option>
+                                        <option value="2">学生</option>
+                                        <option value="6">移民</option>
+                                    </select>
+                                    <var><i></i><em data-ui="select-selected">普通</em></var>
+                                </cite>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <label class="label">航空公司</label>
+                            <div class="label-ctrl">
+                                <input type="text" id="carrier" class="inp-text" data-ui="u-placeholder|中文/拼音/二字码" autocomplete="off" value="" style="color: rgb(51, 51, 51);">
+                            </div>
+                        </li>
+                        <li class="sp4">
+                            <label class="rds2"><input type="checkbox" id="directOnly">仅查直飞</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 多程 高级搜索 -->
+                <div class="search-advform2" style="display: none;">
+                    <div class="line"></div>
+                    <ul class="search-form">
+                        <li class="clearfix">
+                            <label class="label label-ml2">舱位等级</label>
+                            <div class="label-ctrl">
+                                <cite data-ui="u-select" class="form-cite">
+                                    <select name="">
+                                        <option value="ECONOMY">经济舱</option>
+                                        <option value="PREMIUM_ECONOMY">超级经济舱</option>
+                                        <option value="BUSINESS">公务舱</option>
+                                        <option value="FIRST">头等舱</option>
+                                    </select>
+                                    <var><i></i><em data-ui="select-selected">经济舱</em></var>
+                                </cite>
+                            </div>
+                            <label class="label label-ml">乘客类型</label>
+                            <div class="label-ctrl">
+                                <cite data-ui="u-select" class="form-cite">
+                                    <select name="" id="multiJourneyType">
+                                        <option value="0">普通</option>
+                                        <option value="2">学生</option>
+                                        <option value="6">移民</option>
+                                    </select>
+                                    <var><i></i><em data-ui="select-selected">普通</em></var>
+                                </cite>
+                            </div>
+                            <div class="label-ctrl">
+                            <span class="label2 label2-ml">
+                                成人
+                            </span>
+                                <cite data-ui="u-select" class="form-cite form-cite2">
+                                    <select name="">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                    <var><i></i><em data-ui="select-selected">1</em></var>
+                                </cite>
+                            <span class="label2 label2-ml">
+                                儿童
+                            </span>
+                                <cite data-ui="u-select" class="form-cite form-cite2">
+                                    <select name="">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                    <var><i></i><em data-ui="select-selected">0</em></var>
+                                </cite>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 换 -->
+                <div class="return-ico" style="display: block">
+                    <a href="javascript:;" class="gj-city-change">换</a>
+                </div>
+
+                <!-- 单程和返程 高级搜索和搜索按钮 | 多程的样式只需加上 search-subform2 -->
+                <ul class="search-subform" style="display: block">
+                    <li class="cearfix">
+                        <div class="opt">
+                            <a href="#">高级搜索<b class=""></b></a>
+                        </div>
+                        <div class="btn-ctrl">
+                            <input type="button" class="search-btn" value="搜 索">
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!-- Flight Search Box -->
+</div>
+<!-- Main Banner end -->
+
+<!-- 工具箱 & Mini ads banner -->
+<div class="w clearfix">
+    <div class="group">
+        <div class="toolbox">
+            <table>
+                <tbody>
+                <tr>
+                    <td><div class="prel">&nbsp;<a href="www.baidu.com"><i class="card"></i><span>我的机票</span></a></div></td>
+                    <td><div class="prel">&nbsp;<a href="www.jd.com"><i class="calendar"></i><span>需求单</span></a></div></td>
+                    <td><div class="prel">&nbsp;<a href="www.souhu.com"><i class="male"></i><span>常用乘机人</span></a></div></td>
+                </tr>
+                <tr>
+                    <td><div class="prel">&nbsp;<a href="www.sina.com"><i class="compass"></i><span>预定指南</span></a></div></td><!-- 广告位链接 -->
+                    <td><div class="prel">&nbsp;<a href="www.abc.com"><i class="plane"></i><span>在线值机</span></a></div></td>
+                    <td><div class="prel">&nbsp;<a href="www.mi.com"><i class="board"></i><span>机票课堂</span></a></div></td><!-- 广告位链接 -->
+                </tr>
+                <tr>
+                    <td class="h247" colspan="3">
+                        <h3> 7×24小时服务电话：400-611-5718</h3>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="gjsab">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"></a>
+                    <div class="txt">
+                        <h4>神券天天抢</h4>
+                        <p>超值优惠</p>
+                    </div>
+                    <div class="fimg-wrap">
+                        <img class="fimg" src="images/balloon.png" alt=""/>
+                    </div>
+                    <img class="bgimg" width="130" height="160" src="images/gjsab_bg_1.jpg" alt=""/>
+                </li>
+                <li>
+                    <a href="#"></a>
+                    <div class="txt">
+                        <h4>京东百元购</h4>
+                        <p>超值优惠</p>
+                    </div>
+                    <div class="fimg-wrap">
+                        <img class="fimg" src="images/packet.png" alt=""/>
+                    </div>
+                    <img class="bgimg" width="130" height="160" src="images/gjsab_bg_2.jpg" alt=""/>
+                </li>
+                <li>
+                    <a href="#"></a>
+                    <div class="txt">
+                        <h4>顺手领签证</h4>
+                        <p>超值优惠</p>
+                    </div>
+                    <div class="fimg-wrap">
+                        <img class="fimg" src="images/visa.png" alt=""/>
+                    </div>
+                    <img class="bgimg" width="130" height="160" src="images/gjsab_bg_3.jpg" alt=""/>
+                </li>
+                <li>
+                    <a href="#"></a>
+                    <div class="txt">
+                        <h4>旅游大放送</h4>
+                        <p>超值优惠</p>
+                    </div>
+                    <div class="fimg-wrap">
+                        <img class="fimg" src="images/bridge.png" alt=""/>
+                    </div>
+                    <img class="bgimg" width="130" height="160" src="images/gjsab_bg_4.jpg" alt=""/>
+                </li>
+                <li>
+                    <a href="#"></a>
+                    <div class="txt">
+                        <h4>留学看这里</h4>
+                        <p>超值优惠</p>
+                    </div>
+                    <div class="fimg-wrap">
+                        <img class="fimg" src="images/temple.png" alt=""/>
+                    </div>
+                    <img class="bgimg" width="130" height="160" src="images/gjsab_bg_5.jpg" alt=""/>
+                </li>
+                <li>
+                    <a href="#"></a>
+                    <div class="txt">
+                        <h4>特惠商务舱</h4>
+                        <p>超值优惠</p>
+                    </div>
+                    <div class="fimg-wrap">
+                        <img class="fimg" src="images/plane.png" alt=""/>
+                    </div>
+                    <img class="bgimg" width="130" height="160" src="images/gjsab_bg_6.jpg" alt=""/>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 往返|单程 begin -->
+<div class="w">
+    <!-- GuoJiHangXian = gjhx -->
+    <!-- u-tab|evtType|currCls|auto|stay|nav|content|defIndex -->
+    <!-- 往返 -->
+    <div class="gjtab gjhx" data-ui="u-tab|mouseenter|&|false">
+        <div class="gjtab-hd clearfix">
+            <h2 class="clearfix"><div class="title"><span class="type">往返</span> 国际•港澳台特惠航线</div><div class="slogan">优惠拿不停</div></h2>
+            <ul class="tab clearfix">
+                <li data-ui="tab-nav"><a href="javascript:;">港澳台/日韩</a><span>◆</span></li>
+                <li data-ui="tab-nav"><a href="javascript:;">东南亚</a><span>◆</span></li>
+                <li data-ui="tab-nav"><a href="javascript:;">欧洲</a><span>◆</span></li>
+                <li data-ui="tab-nav"><a href="javascript:;">美洲</a><span>◆</span></li>
+                <li data-ui="tab-nav"><a href="javascript:;">澳洲/非洲</a><span>◆</span></li>
+            </ul>
+        </div>
+        <div class="gjtab-bd">
+            <div class="overflow-hide">
+                <ul data-ui="tab-content">
+                    <li class="current">
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-ui="tab-content">
+                    <li class="current">
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-ui="tab-content">
+                    <li class="current">
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-ui="tab-content">
+                    <li class="current">
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-ui="tab-content">
+                    <li class="current">
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                                <i></i>
+                                <span class="back">01-07</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 单程 -->
+    <div class="gjtab gjhx single" data-ui="u-tab|mouseenter|&|false">
+        <div class="gjtab-hd clearfix">
+            <h2 class="clearfix"><div class="title"><span class="type">往返</span> 国际•港澳台特惠航线</div><div class="slogan">优惠拿不停</div></h2>
+            <ul class="tab clearfix">
+                <li data-ui="tab-nav"><a href="javascript:;">港澳台/日韩</a><span>◆</span></li>
+                <li data-ui="tab-nav"><a href="javascript:;">东南亚</a><span>◆</span></li>
+                <li data-ui="tab-nav"><a href="javascript:;">欧洲</a><span>◆</span></li>
+                <li data-ui="tab-nav"><a href="javascript:;">美洲</a><span>◆</span></li>
+                <li data-ui="tab-nav"><a href="javascript:;">澳洲/非洲</a><span>◆</span></li>
+            </ul>
+            <div class="cityfrom">
+                <label>出发地：</label>
+                <cite data-ui="u-select" class="form-cite form-cite2">
+                    <select name="">
+                        <option value="bj">北京</option>
+                        <option value="gz">广州</option>
+                        <option value="sh">上海</option>
+                        <option value="hz">杭州</option>
+                        <option value="cd">成都</option>
+                        <option value="hk">香港</option>
+                    </select>
+                    <var><i></i><em data-ui="select-selected">北京</em></var>
+                </cite>
+            </div>
+        </div>
+        <div class="gjtab-bd">
+            <div class="overflow-hide">
+                <ul data-ui="tab-content">
+                    <li class="current">
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">香港</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">马达加斯加</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-ui="tab-content">
+                    <li class="current">
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-ui="tab-content">
+                    <li class="current">
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-ui="tab-content">
+                    <li class="current">
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul data-ui="tab-content">
+                    <li class="current">
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-测试是否会显示点点点">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">测试是否会显示点点点</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">3950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cw">
+                            <a class="href-wrap" href="#"></a>
+                            <img width="25" height="25" class="fcom" src="images/gh_logo.png" alt=""/>
+                            <p class="line">
+                                <a href="" title="北京-约翰内斯堡">
+                                    <span class="from">北京1</span>
+                                    <i></i>
+                                    <span class="to">约翰内斯堡</span>
+                                </a>
+                            </p>
+                            <p class="date">
+                                <span class="go">12-31</span>
+                            </p>
+                            <p class="price">
+                                <span class="symbol">¥</span>
+                                <span class="num">950</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 往返|单程 end -->
+
+<!-- 热门主题 begin -->
+<div class="w">
+    <div class="rmzt">
+        <div class="rmzt-hd">
+            <h2 class="clearfix"><div class="title">热门主题</div><div class="slogan">总有你想要的</div></h2>
+        </div>
+        <div class="rmzt-bd">
+            <ul>
+                <div class="overflow-hide">
+                    <li>
+                        <a href="#"></a>
+                        <div class="txt">
+                            <h4>扫货季</h4>
+                            <p class="mid">扫货圣地航线</p>
+                            <p>低至 ¥1299</p>
+                        </div>
+                        <div class="bgwrap">
+                            <img src="images/a380.jpg" alt=""/>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <div class="txt">
+                            <h4>吃货天堂</h4>
+                            <p class="mid">世界各地美食</p>
+                            <p>航线快快走</p>
+                        </div>
+                        <div class="bgwrap">
+                            <img src="images/dinner.jpg" alt=""/>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <div class="txt">
+                            <h4>海岛游</h4>
+                            <p class="mid">海岛度假圣地</p>
+                            <p>低至 ¥1299</p>
+                        </div>
+                        <div class="bgwrap">
+                            <img src="images/beach.jpg" alt=""/>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <div class="txt">
+                            <h4>扫货季</h4>
+                            <p class="mid">扫货圣地航线</p>
+                            <p>¥1299 起</p>
+                        </div>
+                        <div class="bgwrap">
+                            <img src="images/beach2.jpg" alt=""/>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                        <div class="txt">
+                            <h4>反季旅行</h4>
+                            <p class="mid">京东特供</p>
+                            <p>最低 ¥1299</p>
+                        </div>
+                        <div class="bgwrap">
+                            <img src="images/a380.jpg" alt=""/>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 热门主题 end -->
+
+<!-- 品牌特供 begin -->
+<div class="w">
+    <div class="pptg">
+        <h2 class="clearfix"><div class="title">品牌特供</div><div class="slogan">专属你的品质服务</div></h2>
+        <div class="gjscroll" data-ui="u-slide|6|false">
+            <a class="prev ctrl" data-ui="btn-prev"><b></b></a>
+            <a class="next ctrl" data-ui="btn-next"><b></b></a>
+            <div class="gjscroll-list">
+                <ul class="brand" data-ui="slide-wrap">
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">299</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">999</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">299</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">999</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">299</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">999</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">299</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">999</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">299</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">999</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">299</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-ui="slide-item">
+                        <a class="href-wrap" href="#"></a>
+                        <div class="p-img">
+                            <img width="193" height="40" class="err-product" src="images/gjads_pptg_brand_193_40.jpg" alt="">
+                            <img width="193" height="136" class="err-product" src="images/gjads_pptg_post_193_136.jpg" alt="">
+                        </div>
+                        <div class="p-price clearfix">
+                            <div class="left">
+                                <span class="poster">国航春节抄底价</span>
+                            </div>
+                            <div class="right">
+                                <span class="symbol">¥</span>
+                                <span class="price">999</span>
+                                <span class="since">起</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="tab.js"></script>
+<script src="focusPic.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+        #focus {position: relative;}
+        #focus .slider {height: 466px}
+        .root61 #focus .slider-extra, .root61 #focus .slider-panel .inner {
+            width: 1210px;
+        }
+        #focus .slider-extra {
+          height: 466px;
+          margin: 0 auto;
+          position: relative;
+          width: 990px;
+        }        
+        #focus .slider-panel {
+          height: 466px;
+          width: 100%;
+        }
+        .root61 #focus .slider-extra, .root61 #focus .slider-panel .inner {
+          width: 1210px;
+        }        
+        #focus .slider-panel .inner {
+          height: 466px;
+          margin: 0 auto;
+          overflow: hidden;
+          width: 990px;
+        }        
+        .root61 #focus .slider-panel a {
+          width: 730px;
+        }   
+        #focus .slider-panel a {
+          display: block;
+          height: 454px;
+          margin: 12px 250px 0 220px;
+          overflow: hidden;
+          width: 510px;
+        }
+        .root61 #focus .slider-nav {
+          width: 750px;
+        }
+        .slider-nav .slider-selected {
+          background: none repeat scroll 0 0 #b61b1f;
+          color: #fff;
+        }        
+        .slider-page a {
+          background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+          color: #fff;
+          display: block;
+          font-family: simsun;
+          font-size: 22px;
+          font-weight: 400;
+          height: 62px;
+          line-height: 62px;
+          margin-top: -31px;
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          width: 28px;
+          z-index: 1;
+        }
+        #focus .slider-nav {
+          height: 0;
+          left: 210px;
+          line-height: 0;
+          text-align: center;
+          top: 440px;
+          width: 530px;
+        }
+        #focus .slider-nav li {
+          display: inline-block;
+          height: 18px;
+          line-height: 18px;
+          width: 18px;
+        }
+        .slider-nav li {
+          background: none repeat scroll 0 0 #3e3e3e;
+          border-radius: 50%;
+          color: #fff;
+          cursor: pointer;
+          display: inline-block;
+          height: 9px;
+          margin: 0 2px;
+          overflow: hidden;
+          text-align: center;
+          width: 9px;
+        }        
+        #focus .slider-nav, #focus .slider-next, #focus .slider-prev {
+          position: absolute;
+          z-index: 4;
+        }
+        #focus .slider-prev {
+          left: 220px;
+        }
+        div#focus .slider-next {
+          top: 50%;
+        }
+        #focus .slider-next {
+          right: 260px;
+          top: 218px;
+        }        
