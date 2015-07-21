@@ -1,0 +1,24 @@
+#slide{position:relative;overflow:hidden;width:770px;height:190px;margin:10px auto;}
+#slide ul{position:absolute;top:0;overflow:hidden;}
+#slide li{overflow:hidden;height:190px;}
+#slide .slide-controls{
+	position:absolute;
+	height:22px;
+	padding:0 8px;
+	left: auto;
+	top: auto;
+	right: 10px;
+	bottom: 10px;
+}
+#slide .slide-controls li{
+	width:22px;
+	height:22px;
+	border-radius:12px;
+	margin:0 2px;
+	background:#999;
+	line-height:22px;
+	text-align:center;
+	color:#FFF;
+	float:left;
+}
+#slide .slide-controls .cur{background:#B79565;}

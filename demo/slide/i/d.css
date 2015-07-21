@@ -1,0 +1,233 @@
+.mod-main {
+    padding: 10px;
+    width: 740px;
+    background: #fff;
+    margin: 10px auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.mod-main .mt {
+    display: inline-block;
+    display: block;
+    padding: 10px
+}
+
+.mod-main .mt:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+* html .mod-main .mt {
+    height: 1%
+}
+
+*+html .mod-main .mt {
+    min-height: 1%
+}
+
+.mod-main .mt h3 {
+    float: left;
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    color: #333;
+    line-height: 20px
+}
+
+.mod-main .mt .extra-l {
+    float: left
+}
+
+.mod-main .mt .extra-l li {
+    float: left;
+    padding-left: 20px
+}
+
+.mod-main .mt .extra-l li a {
+    display: inline-block;
+    padding-bottom: 2px;
+    color: #999
+}
+
+.mod-main .mt .extra-l li a:hover {
+    color: #e4393c
+}
+
+.mod-main .mt .extra-l li a:hover em {
+    color: #e4393c
+}
+
+.mod-main .mt .extra-l li a.curr {
+    padding-bottom: 0;
+    color: #e4393c;
+    border-bottom: 2px solid #e4393c;
+    font-weight: 700;
+    cursor: default;
+    text-decoration: none
+}
+
+.mod-main .mt .extra-l li.fore-last {
+    border-right: 0
+}
+
+.mod-main .mt .extra-l em {
+    margin-left: 5px
+}
+
+.mod-main .mt .extra-r {
+    float: right
+}
+
+.mod-main .mc {
+    overflow: visible
+}
+
+.follow {
+    position: relative;
+    overflow: visible;
+    padding: 0 20px
+}
+
+.follow .slider-show {
+    overflow: hidden;
+    position: relative;
+    height: 174px;
+    line-height: 0;
+}
+
+.follow .slider-show-ctn {
+    position: relative;
+    z-index: 0;
+    line-height: 18px
+}
+
+.follow ul {
+    display: inline-block;
+    display: block;
+    height: 174px;
+    z-index: 1
+}
+
+.follow ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+* html .follow ul {
+    height: 1%
+}
+
+*+html .follow ul {
+    min-height: 1%
+}
+
+.follow ul li {
+    float: left;
+    padding: 10px 0;
+    height: 154px;
+    margin: 0 5px;
+    width: 130px;
+    text-align: center
+}
+
+.follow .p-price {
+    font-family: verdana;
+    color: #333;
+    line-height: 25px
+}
+
+.follow .p-cut {
+    background: #7e8597;
+    color: #fff;
+    padding: 0 5px;
+    display: inline-block;
+    *display: inline;
+    *zoom:1}
+
+.follow .p-cut b {
+    display: inline-block;
+    *display: inline;
+    *zoom:1;font-weight: 400
+}
+
+.follow .p-cut span.num {
+    background: #525d79;
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    margin: 0 -5px 0 5px;
+    display: inline-block;
+    *display: inline;
+    *zoom:1}
+
+.follow .ctrl {
+    position: absolute;
+    width: 19px;
+    height: 174px;
+    cursor: pointer;
+    overflow: hidden
+}
+
+.follow .ctrl b {
+    position: absolute;
+    width: 19px;
+    height: 31px;
+    top: 50%;
+    margin-top: -15px;
+    overflow: hidden;
+    z-index: 1
+}
+
+.follow .prev {
+    left: 0;
+}
+
+.follow .prev b {
+    background: url(http://misc.360buyimg.com/201007/skin/df/i/20130423A.jpg) 0 0 no-repeat
+}
+
+.follow .prev:hover {
+    left: 0
+}
+
+.follow .prev:hover b {
+    background: url(http://misc.360buyimg.com/201007/skin/df/i/20130423A.jpg) 0 -31px no-repeat
+}
+
+.follow .next {
+    right: 0;
+}
+
+.follow .next b {
+    background: url(http://misc.360buyimg.com/201007/skin/df/i/20130423A.jpg) -20px 0 no-repeat
+}
+
+.follow .next:hover {
+    right: 0
+}
+
+.follow .next:hover b {
+    background: url(http://misc.360buyimg.com/201007/skin/df/i/20130423A.jpg) -20px -31px no-repeat
+}
+
+.follow a.disabled {
+    display: none;
+}
+
+.follow.fol-history ul {
+    height: 166px
+}
+
+.follow.fol-history ul li {
+    width: 120px;
+    height: 146px
+}
