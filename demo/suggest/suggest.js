@@ -159,7 +159,7 @@ $.fn.suggest = function(option, callback) {
 
         function processKey(ev) {
             var val = $input.val()
-            var keyCode = e.keyCode
+            var keyCode = ev.keyCode
             if ((reg2.test(keyCode) && $wrapper.is(':visible')) || (reg1.test(keyCode) && getCurrent())) {
                 ev.preventDefault()
                 ev.stopPropagation()
