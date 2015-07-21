@@ -1,5 +1,3 @@
-~function($, window) {
-
 /**
  * 输入提示组件，该组件为基础组件，在此基础上可以扩展自定义的输入提示
  *
@@ -33,6 +31,8 @@
  *   2015.04.08 增加renderNone参数，支持无结果时提示
  *   2015.05.11 增加fixScroll参数，对滚动事件的处理
  */
+~function($, window) {
+
 $.fn.suggest = function(option, callback) {
     // default settings
     var setting = $.extend({
@@ -72,15 +72,14 @@ $.fn.suggest = function(option, callback) {
 
     // dom & reg 
     var $win = $(window)
-    var reg1 = /^13$|^9$/   
+    var reg1 = /^13$|^9$/
     var reg2 = /27$|38$|40$/
 
-    /*
-     * 去掉所有的html
-     */
+    // 去掉所有的html
     function removeHTML(str) {
         return str.replace(/<[^>]+>?/g, '')
     }
+
     function bootstrap($input) {
         var wrapCls    = setting.wrapCls
         var ulCls      = setting.ulCls
