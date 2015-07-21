@@ -101,18 +101,21 @@ $.fn.suggest = function(option, callback) {
         var fixScroll  = setting.fixScroll
 
         if ( $input.data('hasSuggest') ) return
+
         // 禁用浏览器默认的文本框自动完成功能
         $input.attr('autocomplete', 'off')
 
         // suggest wrapper
         var $wrapper = $('<div>').addClass(wrapCls)
 
+        // cache ajax result
+        var cache = {}
+
         // current select
         var $current = null
         var timeout  = null
-        // cache ajax result
-        var cache    = {}
 
+        // 默认的 item 创建方式
         if (!renderItem) {
             renderItem = function(obj) {
                 var text = obj.text
@@ -126,11 +129,11 @@ $.fn.suggest = function(option, callback) {
             // event
             $win.load(setPosition).resize(setPosition)
             $input.blur(function() {
-                setTimeout(function(){ $wrapper.hide() }, blurDelay)
+                setTimeout(function(){ hide() }, blurDelay)
             })
             $input.keyup(processKey)
             $input.click(function() {
-                $wrapper.hide()
+                hide()
             })
             $wrapper.delegate('li', 'mouseover', function() {
                 $wrapper.find('li').removeClass(currCls)
@@ -155,6 +158,7 @@ $.fn.suggest = function(option, callback) {
             // exporst popui
             $input.data('suggest', $wrapper)
         }
+
         function processKey(e) {
             var val = $input.val()
             var keyCode = e.keyCode
@@ -172,7 +176,7 @@ $.fn.suggest = function(option, callback) {
                         selectCurrent()
                         break
                     case 27: // escape
-                        $wrapper.hide()
+                        hide()
                         break
                 }
             } else {
@@ -180,6 +184,7 @@ $.fn.suggest = function(option, callback) {
                 timeout = setTimeout(render, delay)
             }
         }
+
         function render() {
             var val = $.trim($input.val())
             var param = {}
@@ -189,7 +194,7 @@ $.fn.suggest = function(option, callback) {
             param[keyName] = val
             // 为空字符或placehodler的文本时忽视
             if (val == '' || val in $.fn.suggest.except) { 
-                $wrapper.hide()
+                hide()
                 return
             }
             if (url) {
@@ -200,7 +205,7 @@ $.fn.suggest = function(option, callback) {
                     $.getJSON(url, param, function(data) {
                         var arr = withDraw(data)
                         if (arr.length == 0 && !renderNone) {
-                            $wrapper.hide()                   
+                            hide()            
                         } else {
                             show(val, arr)
                             cache[val] = arr                            
@@ -211,9 +216,13 @@ $.fn.suggest = function(option, callback) {
                 show(val, dataArr)
             }
         }
+
+        // 隐藏 suggest
         function hide() {
             $wrapper.hide()
         }
+
+        // 显示 suggest
         function show(val, data) {
             var val = removeHTML(val)
             var offset = $input.offset()
@@ -244,6 +253,8 @@ $.fn.suggest = function(option, callback) {
             $ul.find('li:first-child').addClass(currCls)
             $wrapper.show()
         }
+
+        // 设置位置
         function setPosition() {
             var input  = $input[0]
             var offset = $input.offset()
@@ -255,6 +266,8 @@ $.fn.suggest = function(option, callback) {
                 width: width || (offsetWidth - 2)
             })
         }
+
+        // 选取当前的 item
         function selectCurrent() {
             $current = getCurrent()
             if ($current) {
@@ -265,6 +278,8 @@ $.fn.suggest = function(option, callback) {
                 $wrapper.trigger('choose', [val, $current])
             }
         }
+
+        // 获取当前的 item
         function getCurrent() {
             if (!$wrapper.is(':visible')) return false
             $current = $wrapper.find('li.' + currCls)
@@ -273,6 +288,8 @@ $.fn.suggest = function(option, callback) {
             }
             return $current
         }
+
+        // 下一个 item
         function nextResult() {
             $current = getCurrent()
             if ($current) {
@@ -284,6 +301,8 @@ $.fn.suggest = function(option, callback) {
                 $wrapper.find('li:first-child').addClass(currCls)
             }
         }
+
+        // 上一个 item
         function prevResult() {
             $current = getCurrent()
             if ($current) {
@@ -307,6 +326,7 @@ $.fn.suggest = function(option, callback) {
     })
 }
 
+// 屏蔽的单词
 $.fn.suggest.except = {}
 
 }(jQuery, this);
