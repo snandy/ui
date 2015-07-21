@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>充值活动</title>
+    <link rel="stylesheet" href="http://snandy.github.io/ui/css/base.css"/>
+    <link rel="stylesheet" href="i/b.css">
+    <script src="http://snandy.github.io/ui/js/jquery-1.6.4.js"></script>
+</head>
+<body>
+	<div class="zhuanpan">
+		<div class="w">
+			<div class="xinxi m fr">
+				<div class="dingdan">
+					<input type="text" placeholder="输入订单号验证获取机会" class="text">
+					<input type="button" value="获取抽奖机会" class="btn">
+				</div>
+				<div class="xinxi-list">
+					<div class="m">
+						<div class="mt"><h2 class="h2first">我的最新中奖</h2></div>
+						<div class="mc">
+							<div class="con">
+								<ul>
+									<li><span class="extra fr"><b class="red">3</b>台</span>一等奖：美菱智能控温对开门冰箱</li>
+									<li><span class="extra fr"><b class="red">3</b>份</span>二等奖：浙江特产大礼包</li>
+									<li><span class="extra fr"><b class="red">3</b>张</span>三等奖：100元手机充值定向京券</li>
+									<li><span class="extra fr">0张</span>四等奖：5元手机充值定向京券</li>
+									<li><span class="extra fr"><b class="red">3</b>张</span>五等奖：1元手机充值定向京券</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="m">
+						<div class="mt"><h2>我的联系方式
+                            <p class="small">*联系信息中奖后仅限修改一次，请认真填写</p>
+                        </h2></div>
+						<div class="mc">
+							<div class="con con2">
+								<div class="mc">
+                                    <div class="item item1 clearfix">
+                                        <div class="label">姓名：</div>
+                                        <div class="con"><input type="text"  placeholder="姓名"></div>
+                                    </div>
+                                    <div class="item item2 clearfix">
+                                        <div class="label">电话：</div>
+                                        <div class="con"><input type="text" placeholder="仔细核对电话"></div>
+                                    </div>
+                                    <div class="item item3 clearfix">
+                                        <div class="label">地址：</div>
+                                        <div class="con"><input type="text" placeholder="请仔细核对地址"></div>
+                                    </div>
+                                    <div class="pop-btn">
+                                        <input type="button" value="确认提交" class="tijiao">
+                                    </div>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="chou fl">
+				<div class="keyong">当前可用抽奖次数：<b>10次</b></div>
+                <div><canvas id="roller" width="471px" height="471px">请升级您的浏览器!</canvas></div>
+			</div>
+		</div>
+	</div>
+	<div class="guize">
+		<div class="w clearfix">
+			<div class="zhongjiang m fr">
+				<div class="mt">
+					<h2 class="title">充值排行</h2>
+				</div>
+
+                <div class="mc">
+                    <div class="tab-content">
+                        <div class="detail">
+                            <div id="marquee1">
+                                <ul class="list">
+                                    <li>
+                                        <span class="fore1">Num1</span>
+                                        <span class="fore2">*伟彬</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">Num1</span>
+                                        <span class="fore2">*伟彬</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">Num1</span>
+                                        <span class="fore2">*伟彬</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">Num1</span>
+                                        <span class="fore2">*伟彬</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">Num1</span>
+                                        <span class="fore2">*伟彬</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">Num1</span>
+                                        <span class="fore2">*伟彬</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">Num1</span>
+                                        <span class="fore2">*伟彬</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">Num1</span>
+                                        <span class="fore2">*伟彬</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">Num1</span>
+                                        <span class="fore2">*伟彬</span>
+                                    </li>                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt">
+                    <h2 class="title">充值排行</h2>
+                </div>
+				<div class="mc">
+					<div class="tab-content">
+						<div class="detail detail2">
+                            <ul>
+                                <li class="list-head">
+                                    <span class="fore1">时间</span>
+                                    <span class="fore2">账户</span>
+                                    <span class="fore3">中奖</span>
+                                </li>
+                            </ul>
+                            <div id="marquee2">
+    							<ul class="list">
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">美菱智能控温对开门冰箱</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">美菱智能控温对开门冰箱</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">美菱智能控温对开门冰箱</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">美菱智能控温对开门冰箱</span>
+    								</li>
+    								<li>
+    									<span class="fore1">12:40:30</span>
+    									<span class="fore2">yriowehgkdhbisdhjkbfg</span>
+    									<span class="fore3">50元手机充值京券</span>
+    								</li>
+                                    <li>
+                                        <span class="fore1">12:40:30</span>
+                                        <span class="fore2">yriowehgkdhbisdhjkbfg</span>
+                                        <span class="fore3">美菱智能控温对开门冰箱</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">12:40:30</span>
+                                        <span class="fore2">yriowehgkdhbisdhjkbfg</span>
+                                        <span class="fore3">50元手机充值京券</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">12:40:30</span>
+                                        <span class="fore2">yriowehgkdhbisdhjkbfg</span>
+                                        <span class="fore3">美菱智能控温对开门冰箱</span>
+                                    </li>
+                                    <li>
+                                        <span class="fore1">12:40:30</span>
+                                        <span class="fore2">yriowehgkdhbisdhjkbfg</span>
+                                        <span class="fore3">50元手机充值京券</span>
+                                    </li>                                                                        
+    							</ul>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="shuoming m fl">
+				<div class="mt"><h2 class="title">活动规则</h2></div>
+				<div class="mc">
+					<div class="detail">
+						<div class="text">
+							<strong class="font1">抽奖活动时间：</strong>2014年11月10日0点-11月12日24点
+						</div>
+						<div class="text">
+							<strong class="font1">参与活动资格说明：</strong><br />11.10-11.12期间内，凡购买活动页内点卡，即可凭订单号进行抽奖，一个订单号限抽奖一次。
+						</div>
+						<div class="t ext">
+							<strong class="font1">活动规则：</strong><br />
+							1.11.10-11.12活动期间，凡购买活动页面内游戏点卡，即可凭订单号进行抽奖；  <br>
+                            2.11.10-11.12活动期间，充值活动页面内点卡且三天累计充值金额排名第一者，即可获得xbox一台；（不区分游戏）<br>
+                            3.订单必须为充值成功订单，请尽可能提前下单，如因支付问题错过活动，京东不承担任何责任； <br>
+                            4.中奖名单将在页面下方实时滚动展示，请中奖用户在11月15日前在页面右上方填写联系方式，如因用户未及时完善信息导致无法联络，则视为用户自动放弃该奖品；<br>
+                            5.所有奖品将在活动结束后15个工作日内进行邮寄。   
+						</div>
+						<div class="text">
+							<strong class="font1">特别说明：</strong><br />
+							<div class="line2 line">显卡品牌为随机发放，具体请以实际收到奖品为准。
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="marquee.js"></script>
+<script type="text/javascript">
+	$("#marquee1").marquee({
+	    deriction: "up",
+	    width: 340,
+	    height: 114,
+	    step: 1,
+	    delay: 10,
+	    stay: 1000,
+	    auto: true
+	})
+	$("#marquee2").marquee({
+	    deriction: "up",
+	    width: 340,
+	    height: 132,
+	    step: 1,
+	    delay: 10,
+	    stay: 1000,
+	    auto: true
+	})
+</script>
+</body>
+</html>
