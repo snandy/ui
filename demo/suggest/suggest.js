@@ -129,12 +129,10 @@ $.fn.suggest = function(option, callback) {
             // event
             $win.load(setPosition).resize(setPosition)
             $input.blur(function() {
-                setTimeout(function(){ hide() }, blurDelay)
+                setTimeout(hideSuggest, blurDelay)
             })
             $input.keyup(processKey)
-            $input.click(function() {
-                hide()
-            })
+            $input.click(hideSuggest)
             $wrapper.delegate('li', 'mouseover', function() {
                 $wrapper.find('li').removeClass(currCls)
                 $(this).addClass(currCls)                
@@ -149,7 +147,7 @@ $.fn.suggest = function(option, callback) {
                     $win.scroll(setPosition)
                     break
                 case 'hide':
-                    $win.scroll(hide)
+                    $win.scroll(hideSuggest)
                     break
                 default:;
             }
@@ -176,7 +174,7 @@ $.fn.suggest = function(option, callback) {
                         selectCurrent()
                         break
                     case 27: // escape
-                        hide()
+                        hideSuggest()
                         break
                 }
             } else {
@@ -194,36 +192,36 @@ $.fn.suggest = function(option, callback) {
             param[keyName] = val
             // 为空字符或placehodler的文本时忽视
             if (val == '' || val in $.fn.suggest.except) { 
-                hide()
+                hideSuggest()
                 return
             }
             if (url) {
                 // 优先从缓存取
                 if (cache[val]) {
-                    show(val, cache[val])
+                    showSuggest(val, cache[val])
                 } else {
                     $.getJSON(url, param, function(data) {
                         var arr = withDraw(data)
                         if (arr.length == 0 && !renderNone) {
-                            hide()            
+                            hideSuggest()            
                         } else {
-                            show(val, arr)
+                            showSuggest(val, arr)
                             cache[val] = arr                            
                         }
                     })
                 }
             } else {
-                show(val, dataArr)
+                showSuggest(val, dataArr)
             }
         }
 
         // 隐藏 suggest
-        function hide() {
+        function hideSuggest() {
             $wrapper.hide()
         }
 
         // 显示 suggest
-        function show(val, data) {
+        function showSuggest(val, data) {
             var val = removeHTML(val)
             var offset = $input.offset()
 
@@ -272,7 +270,7 @@ $.fn.suggest = function(option, callback) {
             $current = getCurrent()
             if ($current) {
                 var val = $current.attr('data-val')
-                $wrapper.hide()
+                hideSuggest()
                 $input.val(val)
                 $input.attr('data-val', $current.attr('rel'))
                 $wrapper.trigger('choose', [val, $current])
