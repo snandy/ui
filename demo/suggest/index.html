@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>B Suggest</title>
+    <link rel="stylesheet" href="http://snandy.github.io/ui/css/base.css"/>
+    <link rel="stylesheet" href="http://misc.360buyimg.com/virtuals/lvyou/2014/skin/lvyou.base.css">
+    <script src="http://snandy.github.io/ui/js/jquery-1.6.4.js"></script>
+    <script src="http://snandy.github.io/ui/js/baseUI.js"></script>
+	<style type="text/css">
+	div.d1 {
+		width: 300px;
+		margin: 10px auto;
+	}
+	</style>
+	<script type="text/javascript">
+        window.pageConfig = {
+            compatible: true,
+            navId: "home"
+        };
+    </script>    
+	<script src="country.js"></script>
+	<script charset="utf-8" src="http://trip.jd.com/html/data.js"></script>
+	<script src="suggest.js"></script>
+	<script src="citySuggest.js"></script>	    
+</head>
+<body>
+<div class="w d1">
+	static: <input id="ip1" type="text" data-ui="u-suggest|dujiaAllCity|a.json"/>
+</div>
+<div class="w d1">
+	ajax: <input id="ip2" type="text" data-ui="u-suggest|dujiaAllCity|a.json"/>
+</div>
+<div class="w d1">
+	city: <input id="ip3" type="text" style="width: 200px"/>
+</div>
+<div class="w d1">
+	city: <input id="ip4" type="text" style="width: 200px"/>
+</div>
+<div class="w d1">
+	ajax with no result1: <input id="ip5" type="text"/>
+</div>
+<div class="w d1">
+	ajax with no result2: <input id="ip6" type="text"/>
+</div>
+
+<script type="text/javascript">
+	var dataArr = [{text: '北京', val: 'beijing'}, {text: '上海', val: 'shanghai'}, {text: '天津', val: 'tianjin'}]
+	$('#ip1').suggest({
+		wrapCls: 'ac_results',
+		currCls: 'ac_over',
+		dataArr: dataArr
+	})
+
+	$('#ip2').suggest({
+		wrapCls: 'ac_results',
+		currCls: 'ac_over',
+		url: 'a.json',	
+		withDraw: function(obj) {
+			return $.map(obj.retMessage, function(arr) {
+				var text = arr[1]
+				var val  = arr[2]
+				return {
+					text: text,
+					val: val
+				}
+			})
+		}
+	})
+
+	$('#ip3').citySuggest({
+		dataArr: dataObj.hotelAllCity
+	})
+
+	// event
+	var $suggest = $('#ip3').getPopUI('suggest')
+	$suggest.bind('choose', function(ev, val, $li) {
+		console.log(val)
+	})
+
+	$('#ip4').citySuggest({
+		dataArr: country
+	})
+
+	$('#ip5').suggest({
+		wrapCls: 'ac_results',
+		currCls: 'ac_over',
+		url: 'b.json',
+		withDraw: function(obj) {
+			return $.map(obj.retMessage, function(arr) {
+				var text = arr[1]
+				var val  = arr[2]
+				return {
+					text: text,
+					val: val
+				}
+			})
+		},
+		renderNone: function(val) {
+			return '<li>没有找到：' + val + '</li>'
+		}
+	})
+	$('#ip6').suggest({
+		wrapCls: 'ac_results',
+		currCls: 'ac_over',
+		url: 'b.json',
+		withDraw: function(obj) {
+			return $.map(obj.retMessage, function(arr) {
+				var text = arr[1]
+				var val  = arr[2]
+				return {
+					text: text,
+					val: val
+				}
+			})
+		}
+	})		
+</script>
+</body>
+</html>

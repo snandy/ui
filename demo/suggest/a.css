@@ -1,0 +1,66 @@
+.m980 {
+  width: 980px;
+  margin: 0 auto;
+}
+.t30 {
+  margin-top: 30px;
+}
+input {
+  height: 20px;
+  padding: 3px;
+  border: 1px solid #ccc;
+}
+/*suggest*/
+.suggest_results {
+  background: #fff;
+  border: 1px solid #7f9db9;
+  position: absolute;
+  zoom: 1;
+  z-index: 9;
+  display: none;
+  *width: 330px;
+}
+.suggest_results ul li {
+  border: 1px solid #fff;
+  line-height: 20px;
+  font-size: 12px;
+}
+.suggest_results ul li a {
+  white-space: nowrap;
+  text-decoration: none;
+  display: block;
+  color: #05a;
+  padding: 1px 3px;
+}
+.suggest_results ul li a span {
+  float: right;
+  padding-left: 10px;
+}
+.suggest_results ul li a:hover {
+  background: #80c3ff;
+  color: #fff;
+  text-decoration: none;
+}
+.suggest_results ul .suggest_over {
+  background: #80c3ff;
+  color: #fff;
+}
+.suggest_results .suggest_red {
+  padding-left: 5px;
+  color: #c00;
+}
+.suggest_results .suggest_result_tip {
+  border-bottom: 1px dashed #666;
+  padding: 3px;
+  font-size: 12px;
+}
+.suggest_results .suggest_result_null {
+  background-color: #bb0000;
+  color: #fff;
+  overflow: hidden;
+}
+.error-bd {
+  border: 1px solid red;
+  color: #bb0000;
+}
+/*base end*/
