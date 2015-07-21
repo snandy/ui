@@ -157,12 +157,12 @@ $.fn.suggest = function(option, callback) {
             $input.data('suggest', $wrapper)
         }
 
-        function processKey(e) {
+        function processKey(ev) {
             var val = $input.val()
             var keyCode = e.keyCode
             if ((reg2.test(keyCode) && $wrapper.is(':visible')) || (reg1.test(keyCode) && getCurrent())) {
-                e.preventDefault()
-                e.stopPropagation()
+                ev.preventDefault()
+                ev.stopPropagation()
                 switch(keyCode) {
                     case 38: // up
                         prevResult()
